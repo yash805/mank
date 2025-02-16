@@ -1,0 +1,83 @@
+.grants-container {
+    background: rgba(193, 223, 234, 0.561); /* Same background as Collaborations */
+    padding: 100px 20px;
+    min-height: 120vh; /* Ensure full height */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.grants-heading {
+    color: black;
+    font-size: 50px;
+    margin-bottom: 30px; /* Space between heading and grid */
+}
+
+.grants-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 60px; /* Space between items */
+    max-width: 1000px; /* Center grid horizontally */
+    width: 100%;
+}
+
+.grant-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
+    overflow: hidden; /* Ensure image does not overflow */
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.grant-item img {
+    width: 100%; /* Make image fit within its container */
+    height: auto;
+    display: block;
+}
+
+.grant-item p {
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+/* Hover effect to enhance 3D look */
+.grant-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    
+    .grants-heading {
+        font-size: 40px; /* Adjust font size for smaller screens */
+    }
+
+    .grants-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+        gap: 30px; /* Smaller gap between items */
+    }
+
+    .grant-item {
+        transform: translateY(0); /* Reduce offset for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .grants-heading {
+        font-size: 30px; /* Adjust font size for small screens */
+    }
+
+    .grants-grid {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+        gap: 20px; /* Smaller gap between items */
+    }
+
+    .grant-item {
+        transform: translateY(0); /* No vertical offset */
+    }
+}

@@ -1,0 +1,97 @@
+/* src/components/Impact.css */
+
+.impact-container {
+    width: 97%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.impact-heading {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.impact-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.impact-image-left,
+.impact-image-right {
+    width: 30%;
+    height: 65vh;
+    border-radius: 10px;
+}
+
+.impact-text {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    color: rgb(151, 144, 144);
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.vision-heading {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.vision-text {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    color: rgb(151, 144, 144);
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .impact-heading,
+    .vision-heading {
+        font-size: 32px;
+    }
+
+    .impact-images {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .impact-image-left,
+    .impact-image-right {
+        width: 50%;
+        height: 300px;
+    }
+
+    .impact-text,
+    .vision-text {
+        font-size: 18px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .impact-heading,
+    .vision-heading {
+        font-size: 28px;
+    }
+
+    .impact-image-left,
+    .impact-image-right {
+        width: 90%;
+    }
+
+    .impact-text,
+    .vision-text {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,99 @@
+/* Container styling */
+.icons-section-container {
+  max-width: 97%;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Row layout for icons */
+.icons-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Icons will wrap on smaller screens */
+  gap: 20px;
+}
+
+/* Icon item styling */
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px; /* Max width for individual icons and text */
+}
+
+/* Container for hexagon and icon */
+.icon-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Hexagon shape */
+.hexagon {
+  width: 120px;
+  height: 120.74px;
+  background-color: rgba(0, 0, 0, 0.1);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Icon styles */
+.icon {
+  font-size: 50px; /* Icon size */
+  color: inherit; /* Matches parent color */
+}
+
+/* Specific colors for each icon and hexagon */
+.science-icon .icon {
+  color: #FF6347; /* Tomato */
+}
+
+.icon-item.science-icon .hexagon {
+  background-color: rgba(255, 99, 71, 0.2); /* Lighter Tomato with reduced opacity */
+}
+
+.person-icon .icon {
+  color: #4682B4; /* SteelBlue */
+}
+
+.icon-item.person-icon .hexagon {
+  background-color: rgba(70, 130, 180, 0.2); /* Lighter SteelBlue with reduced opacity */
+}
+
+.location-icon .icon {
+  color: #32CD32; /* LimeGreen */
+}
+
+.icon-item.location-icon .hexagon {
+  background-color: rgba(50, 205, 50, 0.2); /* Lighter LimeGreen with reduced opacity */
+}
+
+/* Text styling */
+.text-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.icon-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: gray; /* Same text color across screen sizes */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hexagon {
+    width: 100px; /* Smaller hexagon on smaller screens */
+    height: 100.62px;
+  }
+
+  .icon {
+    font-size: 40px; /* Smaller icon size */
+  }
+
+  .icon-text {
+    font-size: 14px; /* Adjust text size for smaller screens */
+  }
+}

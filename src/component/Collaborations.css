@@ -1,0 +1,77 @@
+.collaborations-container {
+    background: linear-gradient(to bottom right, #176a8e, #99cc72); /* Gradient from top left to bottom right */
+    padding: 40px 20px;
+    min-height: 100vh; /* Ensure full height */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.collaborations-heading {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px; /* Space between heading and grid */
+}
+
+.images-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 300px); /* Increase column width */
+    gap: 20px; /* Adjust gap between images */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for each image item */
+.image-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.images-grid .image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.images-grid .image-item.in-view {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .collaborations-heading {
+        font-size: 40px; /* Adjust font size for smaller screens */
+    }
+
+    .images-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+        gap: 15px; /* Smaller gap between images */
+    }
+
+    .images-grid .image-item {
+        transform: translateY(20px); /* Slightly reduced offset */
+    }
+}
+
+@media (max-width: 480px) {
+    .collaborations-heading {
+        font-size: 30px; /* Adjust font size for small screens */
+    }
+
+    .images-grid {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+        gap: 10px; /* Smaller gap between images */
+    }
+
+    .images-grid .image-item {
+        transform: translateY(10px); /* Even smaller offset */
+    }
+}

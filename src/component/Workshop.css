@@ -1,0 +1,224 @@
+/* Main container for the event pictures */
+.event-pictures-containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 150px 20px;
+  background-color: rgba(19, 87, 183, 0.693); /* Blue background */
+  position: relative; /* Needed for absolute positioning of carousel */
+}
+
+.event-headings {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  top: 20px;
+  z-index: 2;
+}
+
+.background-images {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  position: absolute;
+  top: 100px;
+  z-index: 1;
+}
+
+.carousels {
+  width: 49%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.carousel-video-wrappers {
+  width: 80%; /* Make the video wrapper a percentage for better responsiveness */
+  max-width: 800px; /* Max width for the video */
+  height: 400px; /* Set a proportional height */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-arrow.prevs,
+.carousel-arrow.nexts {
+  background: transparent;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  transform: translateY(-50%);
+  color: gray;
+  transition: color 0.3s ease-in-out;
+}
+
+.carousel-arrow.prevs {
+  left: -50px;
+}
+
+.carousel-arrow.nexts {
+  right: -50px;
+}
+
+/* Video grid section styles */
+.video-grid-section {
+  padding: 100px 20px;
+  background-color: rgba(19, 87, 183, 0.693);
+  text-align: center;
+}
+
+.video-grid-section h2 {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 100px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.video-grid-item {
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.video-grid-item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Styles */
+
+/* For tablet and larger mobile devices */
+@media (max-width: 768px) {
+  .event-headings {
+    font-size: 40px;
+    top: 50px;
+  }
+
+  .background-images {
+    width: 100%; /* Full width for smaller screens */
+    height: auto;
+    top: 130px;
+  }
+
+  .carousels {
+    width: 70%; /* Smaller width for carousel */
+    top: 50%;
+  }
+
+  .carousel-video-wrappers {
+    width: 100%;
+    height: 300px; /* Reduced height */
+  }
+
+  .carousel-arrow.prevs,
+  .carousel-arrow.nexts {
+    font-size: 30px; /* Smaller arrows */
+  }
+
+  .video-grid-section h2 {
+    font-size: 35px;
+    margin-bottom: 60px;
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+    gap: 20px;
+    width: 90%;
+  }
+
+  .video-grid-item iframe {
+    height: 200px; /* Adjust iframe height */
+  }
+}
+
+/* For mobile devices under 480px */
+@media (max-width: 480px) {
+  .event-pictures-containers {
+    padding: 100px 10px; /* Reduced padding */
+  }
+
+  .event-headings {
+    font-size: 28px;
+    top: 60px;
+  }
+
+  .background-images {
+    width: 100%;
+    height: auto;
+    top: 100px;
+  }
+
+  .carousels {
+    width: 90%; /* Full width for carousel */
+    top: 45%;
+  }
+
+  .carousel-video-wrappers {
+    width: 100%;
+    height: 250px; /* Reduced height for mobile */
+  }
+
+  .carousel-arrow.prevs,
+  .carousel-arrow.nexts {
+    font-size: 25px; /* Smaller arrows */
+  }
+
+  .video-grid-section h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    gap: 15px;
+    width: 100%;
+  }
+
+  .video-grid-item iframe {
+    height: 150px; /* Reduced iframe height */
+  }
+}
+
+/* For laptop screens (large desktops) */
+@media (min-width: 1024px) {
+  .carousels {
+    width: 60%; /* Adjust the carousel width for laptop */
+  }
+
+  .carousel-video-wrappers {
+    width: 60%; /* Smaller video width for laptop */
+    height: 350px; /* Adjust height accordingly */
+  }
+
+  .carousel-arrow.prevs,
+  .carousel-arrow.nexts {
+    font-size: 35px; /* Adjust arrow size */
+  }
+}
+@media (max-width: 720px) {
+  .background-images {
+    display: none; /* Hide the background image for screens smaller than 720px */
+  }
+}

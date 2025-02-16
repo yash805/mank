@@ -1,0 +1,137 @@
+.event-pictures-container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(193, 223, 234, 0.561);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.event-heading {
+  color: black;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Take up full width */
+  max-width: 800px; /* Max width for carousel */
+}
+
+.carousel-image-wrapper {
+  width: 200px; /* Default size for side images */
+  height: 200px;
+  padding: 10px;
+  margin: 0 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.carousel-image-wrapper.center {
+  width: 300px; /* Bigger size for center image */
+  height: 300px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-arrow {
+  background: transparent;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  color: gray;
+  transition: color 0.3s ease-in-out;
+}
+
+.carousel-arrow.prev {
+  left: -40px; /* Position the left arrow outside the image */
+}
+
+.carousel-arrow.next {
+  right: -40px; /* Position the right arrow outside the image */
+}
+
+/* Responsive Styles for Tablet and Mobile */
+
+@media (max-width: 768px) {
+  .event-heading {
+    font-size: 40px; /* Adjust font size for tablets */
+    margin-bottom: 40px;
+  }
+
+  .carousel {
+    width: 80%; /* Slightly narrower carousel on tablet */
+  }
+
+  .carousel-image-wrapper {
+    width: 150px; /* Smaller side image size for tablet */
+    height: 150px;
+  }
+
+  .carousel-image-wrapper.center {
+    width: 250px; /* Larger center image size for tablet */
+    height: 250px;
+  }
+
+  .carousel-arrow {
+    font-size: 35px; /* Smaller arrows for tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .event-heading {
+    font-size: 30px; /* Smaller font for mobile */
+    margin-bottom: 30px;
+  }
+
+  .carousel {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .carousel-image-wrapper {
+    display: none; /* Hide side images on mobile */
+  }
+
+  .carousel-image-wrapper.center {
+    display: block; /* Only show center image on mobile */
+    width: 200px; /* Slightly bigger center image */
+    height: 200px;
+  }
+
+  .carousel-arrow {
+    font-size: 30px; /* Smaller arrows for mobile */
+    width: 40px; /* Set width for arrows */
+    height: 40px; /* Set height for arrows */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+  }
+
+  .carousel-arrow.prev {
+    left: 0; /* Position left arrow outside the image */
+    right: auto;
+  }
+
+  .carousel-arrow.next {
+    right: 0; /* Position right arrow outside the image */
+    left: auto;
+  }
+}

@@ -1,0 +1,9 @@
+.navbar-header-wrapper {
+    background-image: url('https://img.freepik.com/free-vector/cartoon-empty-laboratory-room_23-2148904907.jpg?semt=ais_hybrid');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Adjust according to your needs */
+    display: flex;
+    flex-direction: column;
+}
